@@ -49,3 +49,19 @@ function cafetera(ing1, ing2){
 
 var tasa = cafetera('leche', 'cafe');
 console.log(tasa);
+
+/** DOM */
+const txtn1 = document.querySelector('#n1');
+const txtn2 = document.querySelector('#n2');
+const respuesta = document.querySelector('#resp');
+const btncalcular = document.querySelector('#calcular');
+btncalcular.addEventListener('click', calcular);
+
+
+function calcular(){
+    const op1 = parseFloat( txtn1.value );
+    const op2 = parseFloat( txtn2.value );
+    let resp = op1+op2;
+    respuesta.innerText = resp;
+    respuesta.style = "color:blue";
+}
