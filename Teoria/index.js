@@ -14,3 +14,15 @@ let potencia = Math.pow(numb, 2);
 let modulo = numb % numb;
 
 console.log(variable + " " + potencia);
+
+/** Condicional if */
+if(numb == 5){
+    console.log('Si es 5');
+} else {
+    console.log('No es 5');
+}
+if(numb%2 == 0){
+    console.log('Es número par');
+} else {
+    console.log('Es número impar');
+}
