@@ -58,10 +58,28 @@ const btncalcular = document.querySelector('#calcular');
 btncalcular.addEventListener('click', calcular);
 
 
+
 function calcular(){
     const op1 = parseFloat( txtn1.value );
     const op2 = parseFloat( txtn2.value );
     let resp = op1+op2;
     respuesta.innerText = resp;
     respuesta.style = "color:blue";
+}
+
+/** Arrays */
+const arryResp = document.querySelector('#arryResp');
+const btnejecutar = document.querySelector('#ejecutar');
+btnejecutar.addEventListener('click', miArray);
+
+let frutas = ["manzana", "mango", "fresa"]
+
+function miArray(){
+    arryResp.innerText = frutas.length //Contar
+    arryResp.innerText = frutas[1] //Seleccionar uno
+    arryResp.innerText = frutas[frutas.length-1] //Seleccionar el último
+    /** Recorrer un Array */
+    frutas.forEach((item, index, array) => {
+        arryResp.innerText = array;
+    });
 }
