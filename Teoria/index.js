@@ -2,7 +2,7 @@ console.log('Hola Mundo');
 
 /** Asignación de valores */
 let variable = "La respuesta es"; //Valor que va a cambiar
-const numb = 5; //Valor no cambia
+let numb = 5; //Valor no cambia
 const operacion = numb + numb; //Valor no cambia
 
 /** Operadores Aritméticos */
@@ -25,4 +25,14 @@ if(numb%2 == 0){
     console.log('Es número par');
 } else {
     console.log('Es número impar');
+}
+
+/** Bucles */
+while(numb < 7){
+    numb++;
+    console.log(numb);
+}
+
+for (let i = 0; i < numb; i++) {
+    console.log(i);
 }
