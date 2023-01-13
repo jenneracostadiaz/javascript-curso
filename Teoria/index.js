@@ -36,3 +36,16 @@ while(numb < 7){
 for (let i = 0; i < numb; i++) {
     console.log(i);
 }
+
+/** Funciones */
+function cafetera(ing1, ing2){
+    if(ing1=='agua' && ing2=='cafe'){
+        return 'americano'
+    }
+    if(ing1=='leche' && ing2=='cafe'){
+        return 'capuchino'
+    }
+}
+
+var tasa = cafetera('leche', 'cafe');
+console.log(tasa);
