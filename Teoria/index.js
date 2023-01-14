@@ -83,3 +83,20 @@ function miArray(){
         arryResp.innerText = array;
     });
 }
+
+/** Fetch */
+/*
+const obtenerData = async () => {
+    const responseAPI = await fetch("https://api.github.com/repositories/19438/commits")
+    const json = await responseAPI.text();
+    console.log(JSON.parse(json));
+}
+*/
+
+const obtenerData = async () =>{
+    await fetch("https://api.github.com/repositories/19438/commits")
+    .then(response=>response.json())
+    .then(json=>console.log(json))
+    .catch(error=>console.log('Solicitud fallido', error))
+}
+obtenerData();
