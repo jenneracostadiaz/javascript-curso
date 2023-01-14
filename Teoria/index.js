@@ -21,6 +21,7 @@ if(numb == 5){
 } else {
     console.log('No es 5');
 }
+
 if(numb%2 == 0){
     console.log('Es número par');
 } else {
@@ -38,7 +39,7 @@ for (let i = 0; i < numb; i++) {
 }
 
 /** Funciones */
-function cafetera(ing1, ing2){
+const cafetera = (ing1, ing2) => {
     if(ing1=='agua' && ing2=='cafe'){
         return 'americano'
     }
@@ -51,15 +52,7 @@ var tasa = cafetera('leche', 'cafe');
 console.log(tasa);
 
 /** DOM */
-const txtn1 = document.querySelector('#n1');
-const txtn2 = document.querySelector('#n2');
-const respuesta = document.querySelector('#resp');
-const btncalcular = document.querySelector('#calcular');
-btncalcular.addEventListener('click', calcular);
-
-
-
-function calcular(){
+const calc = () => {
     const op1 = parseFloat( txtn1.value );
     const op2 = parseFloat( txtn2.value );
     let resp = op1+op2;
@@ -67,14 +60,15 @@ function calcular(){
     respuesta.style = "color:blue";
 }
 
+const txtn1 = document.querySelector('#n1');
+const txtn2 = document.querySelector('#n2');
+const respuesta = document.querySelector('#resp');
+const btncalcular = document.querySelector('#calcular');
+btncalcular.addEventListener('click', calc);
+
+
 /** Arrays */
-const arryResp = document.querySelector('#arryResp');
-const btnejecutar = document.querySelector('#ejecutar');
-btnejecutar.addEventListener('click', miArray);
-
-let frutas = ["manzana", "mango", "fresa"]
-
-function miArray(){
+const miArray = () => {
     arryResp.innerText = frutas.length //Contar
     arryResp.innerText = frutas[1] //Seleccionar uno
     arryResp.innerText = frutas[frutas.length-1] //Seleccionar el último
@@ -83,6 +77,14 @@ function miArray(){
         arryResp.innerText = array;
     });
 }
+
+const arryResp = document.querySelector('#arryResp');
+const btnejecutar = document.querySelector('#ejecutar');
+btnejecutar.addEventListener('click', miArray);
+
+let frutas = ["manzana", "mango", "fresa"]
+
+
 
 /** Fetch */
 /*
